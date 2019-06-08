@@ -1,0 +1,7 @@
+5 5
+Conductor 0 0
+Horizontalline 1 0
+Verticalline 2 0
+Head 2 2
+Head 2 1
+Head 2 0
