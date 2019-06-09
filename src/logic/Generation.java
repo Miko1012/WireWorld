@@ -5,12 +5,25 @@ public class Generation {
     private int x;
     private int y;
     private int genNumber;
+    private FileRead fr;
+    private Config cfg;
 
     public Generation(FileRead read, Config config) {
         this.x = read.getX();
         this.y = read.getY();
         this.genNumber = config.getGenNumber();
+        this.fr = read;
+        this.cfg = config;
+    }
 
+    public Generation () {}
+
+    public void setargs (FileRead read, Config config) {
+        this.x = read.getX();
+        this.y = read.getY();
+        this.genNumber = config.getGenNumber();
+        this.fr = read;
+        this.cfg = config;
     }
 
     public logic.Cell[][] generate(FileRead read) {

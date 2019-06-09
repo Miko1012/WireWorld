@@ -17,7 +17,7 @@
       <TextField fx:id="tf3" layoutX="600.0" layoutY="280.0" prefHeight="20.0" prefWidth="250.0" promptText="0 - 1000" />
       <Button fx:id="b1" layoutX="600.0" layoutY="380.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" text="Start" />
       <Button fx:id="b2" layoutX="730.0" layoutY="380.0" mnemonicParsing="false" onAction="#changel1" prefHeight="80.0" prefWidth="120.0" text="Stop" />
-      <Button fx:id="b3" layoutX="730.0" layoutY="470.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" text="Wczytaj plik" />
+      <Button fx:id="b3" layoutX="730.0" layoutY="470.0" mnemonicParsing="false" onAction="#readfile" prefHeight="80.0" prefWidth="120.0" text="Wczytaj plik" />
       <Button fx:id="b4" layoutX="600.0" layoutY="470.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" text="Zrzut do pliku" />
    </children>
 </AnchorPane>

@@ -13,6 +13,8 @@ public class Config {
         this.outFile = outFile;
     }
 
+    public Config () {}
+
     public int getGenNumber(){
         return genNumber;
     }
@@ -24,5 +26,12 @@ public class Config {
     public String getOutFile(){
         return outFile;
     }
+
+    public void settimejump (int i) {timeJump = i;}
+
+    public void setgennumber (int i) {genNumber = i;}
+
+    public void setinfile (String i) {inFile = i;}
+    public void setoutfile (String i) {outFile = i;}
 
 }

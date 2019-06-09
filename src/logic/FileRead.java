@@ -9,14 +9,16 @@ import java.lang.String;
 
 
 public class FileRead {
-    private String inName;
+    public String inName;
     private int x;
     private int y;
     private String[][] temp;
 
-    public FileRead(Config config) {
-        this.inName = config.getInFile();
-    }
+    public FileRead(Config config) { this.inName = config.getInFile(); }
+
+    public FileRead () {}
+
+    public void setConfig(Config config) {this.inName = config.getInFile();}
 
     public FileRead (String inName){
         this.inName = inName;
@@ -28,7 +30,6 @@ public class FileRead {
         this.y = y;
         this.temp = new String[x][y];
     }
-
 
     public boolean setSize(){
         try{
