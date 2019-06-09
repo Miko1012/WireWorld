@@ -16,6 +16,9 @@ public class AllTests {
         testRead.testReadFile4();
 
 
+        RulesTest testRules = new RulesTest();
+
+        testRules.countHeadNeighboursTest1();
 
 
 
