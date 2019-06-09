@@ -14,12 +14,13 @@ public class FileRead {
         this.inName = config.getInFile();
     }
 
-    public void setSize(){
+    public boolean setSize(){
         try {
             Scanner in = new Scanner(Paths.get(inName));
         }
         catch (IOException e){
             System.out.println("Nie znaleziono pliku.");
+            return false;
         }
 
         try {
@@ -29,8 +30,9 @@ public class FileRead {
             this.temp = new String[x][y];
         } catch (IOException e){
             System.out.println("Błędny format pliku.");
+            return false;
         }
-
+        return true;
     }
 
     public int getX() {

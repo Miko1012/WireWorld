@@ -3,8 +3,6 @@ public class Config {
     private int genNumber;
     private String inFile;
     private String outFile;
-    int xSize;
-    int ySize;
 
     public Config(int timeJump, int genNumber, String inFile, String outFile){
         this.timeJump = timeJump;
@@ -14,6 +12,10 @@ public class Config {
     }
 
 
+
+    public int getGenNumber(){
+        return genNumber;
+    }
 
     public String getInFile() {
         return inFile;

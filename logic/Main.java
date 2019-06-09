@@ -2,45 +2,30 @@ public class Main {
 
 
     public static void main(String[] args) {
-        String nazwapliku = "plik.txt"; //to idzie od czarka
-        String nazwawyjsciowego = "plikout.txt";  //to idzie od czarka
-        int genNumber = 10; //to idzie od czarka
-//        int x = 10; //to idzie od czarka
-//        int y = 10; //to idzie od czarka
-
+        //te rzeczy idą z gui
+        String nazwapliku = "plik.txt";
+        String nazwawyjsciowego = "plikout.txt";
+        int genNumber = 10;
 
 
         Config config = new Config(5,10, nazwapliku, nazwawyjsciowego);
         FileRead read = new FileRead(config);
-        Grid grid = new Grid(read);
-        read.setSize();
-        read.readFileWW();
-        read.printGrid();
 
-        Generation gen = new Generation(read);
 
-        for(int i = 0; i < genNumber; i++ ) {
-            System.out.println();
-            System.out.println("Gen #" + i);
+        boolean ok = read.setSize();
+        if(ok) {
+            read.readFileWW();
+            read.printGrid();
+            Generation gen = new Generation(read, config);
             gen.generate(read);
+
+//            //to do wyjebania potem
+//            for (int i = 0; i < genNumber; i++) {
+//                System.out.println();
+//                System.out.println("Gen #" + i);
+//                gen.generate(read);
+//            }
         }
-
-
-
-
-
-
-
-//            read.readFileWW();
-//
-//            Grid myGrid = new Grid(x, y);
-//
-//            read.printGrid();
-
-
-
-
-
 
     }
 }
