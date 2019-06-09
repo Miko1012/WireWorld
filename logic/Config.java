@@ -1,3 +1,5 @@
+package folder;
+
 public class Config {
     private int timeJump;
     private int genNumber;
@@ -19,6 +21,9 @@ public class Config {
 
     public String getInFile() {
         return inFile;
+    }
+    public String getOutFile(){
+        return outFile;
     }
 
 }

@@ -1,3 +1,5 @@
+package folder;
+
 public class Generation {
     private int x;
     private int y;
@@ -19,9 +21,12 @@ public class Generation {
 
         for (int k = 0; k < genNumber; k++) {
             rules.updateNeighbourCount(cells, x, y);
+            //nieużywane, ale pewnie będzie potrzebne do wyświetlania? idk
+            Cell[][] previousCells = cells;
             rules.changeStates(cells, x, y);
 
 
+            //drukowanie, do usunięcia
             for (int i = 0; i < x; i++) {
                 for (int j = 0; j < y; j++) {
                     if (cells[i][j] instanceof Empty)

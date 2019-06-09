@@ -1,3 +1,5 @@
+package folder;
+
 public abstract class Cell {
     private int headNeighbours;
 

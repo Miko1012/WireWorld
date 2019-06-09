@@ -1,3 +1,5 @@
+package folder;
+
 public class Main {
 
 
@@ -17,8 +19,12 @@ public class Main {
             read.readFileWW();
             read.printGrid();
             Generation gen = new Generation(read, config);
-            gen.generate(read);
+            Cell[][] last =  gen.generate(read);
+            FileWrite write = new FileWrite(config, read);
+            write.writeFile(last);
         }
+
+
 
     }
 }

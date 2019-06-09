@@ -1,3 +1,5 @@
+package folder;
+
 public class Rules {
 
 

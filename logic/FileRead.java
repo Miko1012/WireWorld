@@ -1,4 +1,8 @@
+package folder;
+
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -15,11 +19,17 @@ public class FileRead {
     }
 
     public boolean setSize(){
-        try {
+
+//        File file = new File(inName);
+//        while(!file.exists()) {
+//            System.out.println("Podany plik nie istnieje");
+//            return false;
+//        }
+
+        try{
             Scanner in = new Scanner(Paths.get(inName));
-        }
-        catch (IOException e){
-            System.out.println("Nie znaleziono pliku.");
+        }catch (IOException e){
+            System.out.println("Plik nie istnieje! ");
             return false;
         }
 

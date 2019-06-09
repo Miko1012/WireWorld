@@ -1,3 +1,5 @@
+package folder;
+
 public class Grid {
     private int xSize;
     private int ySize;
