@@ -57,7 +57,7 @@ public class Controller {
         String str[][] = fr.getTemp();
         Grid grid = new Grid(fr.getX(), fr.getY());
         final Cell[][] macierz = grid.createInitial(fr.getX(), fr.getY(), str);
-        cp.drawCanvas(c, macierz);
+       // cp.drawCanvas(c, macierz);
         Generation gen = new Generation(fr, cfg);
         Grid m2 = new Grid();
         m2.savegrid(macierz);
@@ -66,7 +66,6 @@ public class Controller {
         t.schedule(new TimerTask() {
             @Override
             public void run() {
-                //gc.clearRect(0, 0, 500, 500);
                 Cell[][] m = m2.getgrid();
                 m = gen.generateNext(m);
                 cp.clearCanvas(c);

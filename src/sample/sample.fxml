@@ -3,10 +3,11 @@
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Canvas fx:id="c" height="500.0" layoutX="50.0" layoutY="50.0" width="500.0" />
       <Label fx:id="l1" layoutX="600.0" layoutY="50.0" prefHeight="20.0" prefWidth="250.0" text="Nazwa pliku z konfiguracją do wczytania:" />
@@ -16,10 +17,9 @@
       <Label fx:id="l3" layoutX="600.0" layoutY="210.0" prefHeight="20.0" prefWidth="250.0" text="Interwał (w milisekundach)" />
       <TextField fx:id="tf3" layoutX="600.0" layoutY="247.0" prefHeight="20.0" prefWidth="250.0" promptText="0 - 1000" />
       <Button fx:id="b1" layoutX="600.0" layoutY="380.0" mnemonicParsing="false" onAction="#start" prefHeight="80.0" prefWidth="120.0" text="Start" />
-      <Button fx:id="b2" layoutX="730.0" layoutY="380.0" mnemonicParsing="false" onAction="#changel1" prefHeight="80.0" prefWidth="120.0" text="Stop" />
-      <Button fx:id="b3" layoutX="730.0" layoutY="470.0" mnemonicParsing="false" onAction="#readfile" prefHeight="80.0" prefWidth="120.0" text="Wczytaj plik" />
-      <Button fx:id="b4" layoutX="600.0" layoutY="470.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="120.0" text="Zrzut do pliku" />
+      <Button fx:id="b3" layoutX="730.0" layoutY="380.0" mnemonicParsing="false" onAction="#readfile" prefHeight="80.0" prefWidth="120.0" text="Wczytaj plik" />
       <Label fx:id="l4" layoutX="600.0" layoutY="292.0" text="Ilość generacji do wygenerowania" />
       <TextField fx:id="tf4" layoutX="600.0" layoutY="319.0" prefHeight="25.0" prefWidth="250.0" promptText="1 - 1000" />
+      <TextArea layoutX="50.0" layoutY="480.0" prefHeight="280.0" prefWidth="800.0" />
    </children>
 </AnchorPane>
