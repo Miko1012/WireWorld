@@ -6,6 +6,8 @@ public class Grid {
     private int ySize;
     private Cell[][] grid;
 
+    public void savegrid(Cell[][] arr) {this.grid = arr;}
+    public Cell[][] getgrid () {return this.grid;}
 
     public Grid(int x, int y){
         this.xSize = x;
@@ -13,7 +15,12 @@ public class Grid {
         this.grid = new Cell[xSize][ySize];
     }
 
+    public Grid(){}
 
+    public Cell[][] getCells(){
+        return grid;
+
+    }
 
     public Cell[][] createInitial (int x, int y, String[][] input){
         for(int i = 0; i < x; i ++){

@@ -10,11 +10,12 @@ public class Main {
         int genNumber = 10;
 
 
+
         Config config = new Config(5, genNumber, plikin, plikout);
         FileRead read = new FileRead(config);
 
 
-        boolean ok = read.setSize();
+        /*boolean ok = read.setSize();
         if(ok) {
             read.readFile();
             read.printGrid();
@@ -22,7 +23,7 @@ public class Main {
             Cell[][] last =  gen.generate(read);
             FileWrite write = new FileWrite(config, read);
             write.writeFile(last);
-        }
+        }*/
 
 
 

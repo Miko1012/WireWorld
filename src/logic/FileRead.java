@@ -16,7 +16,7 @@ public class FileRead {
 
     public FileRead(Config config) { this.inName = config.getInFile(); }
 
-    public FileRead () {}
+    //public FileRead () {}
 
     public void setConfig(Config config) {this.inName = config.getInFile();}
 

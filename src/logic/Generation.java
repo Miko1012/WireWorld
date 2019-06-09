@@ -25,6 +25,16 @@ public class Generation {
         this.fr = read;
         this.cfg = config;
     }
+/*
+    public logic.Cell[][] generatenext(Cell[][] cells) {
+        Rules rules = new Rules();
+
+            rules.updateNeighbourCount(cells, x, y);
+            rules.changeStates(cells, x, y);
+            System.out.println();
+
+        return cells;
+    }
 
     public logic.Cell[][] generate(FileRead read) {
         Grid grid = new Grid(this.x, this.y);
@@ -59,6 +69,25 @@ public class Generation {
         }
 
         return cells;
+    }*/
+
+    public logic.Grid generateFirst(FileRead read) {
+        Grid grid = new Grid(this.x, this.y);
+        Rules rules = new Rules();
+        System.out.println();
+        Cell[][] cells = grid.createInitial(x, y, read.getTemp());
+
+        return grid;
+    }
+
+    public logic.Cell[][] generateNext(Cell[][] cells){
+        Rules rules = new Rules();
+
+        rules.updateNeighbourCount(cells, x, y);
+        rules.changeStates(cells, x, y);
+
+        return cells;
     }
 }
+
 

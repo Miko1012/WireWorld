@@ -4,10 +4,14 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import logic.*;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Controller {
     @FXML
@@ -25,36 +29,52 @@ public class Controller {
     @FXML
     private TextField tf3;
     @FXML
+    private TextField tf4;
+    @FXML
     private Label l1;
     @FXML
     public Canvas c;
-
     CanvasPainter cp = new CanvasPainter();
-    Config cfg = new Config();
-    FileRead fr = new FileRead();
+    //GraphicsContext gc = c.getGraphicsContext2D();
     Generation g = new Generation();
 
-    private Cell[][] grid;
-
     public void readfile() {
-        System.out.println(tf1.getText());
-        cfg.setinfile(tf1.getText());
-        System.out.println("a");
-        fr.setConfig(cfg);
-        System.out.println("b");
+        Config cfg = new Config(1000, 0, tf1.getText(), "cokolwiek");
+        FileRead fr = new FileRead(cfg);
+        fr.setSize();
         fr.readFile();
-        System.out.println("c");
-        g.setargs(fr, cfg);
-        Grid gr = new Grid(fr.getX(), fr.getY());
-        grid = gr.createInitial(fr.getX(), fr.getY(), fr.getTemp());
-        cp.drawCanvas(c, grid);
+        String str[][] = fr.getTemp();
+        Grid grid = new Grid(fr.getX(), fr.getY());
+        Cell[][] macierz = grid.createInitial(fr.getX(), fr.getY(), str);
+        cp.drawCanvas(c, macierz);
+    }
 
-        //FileRead fr = new FileRead(tf1.getText());
-        //fr.readFile();
-        //System.out.println(tf1.getText());
-        //Generation g = new Generation(fr, cfg);
-        //grid = g.generate(fr);
-       // cp.drawCanvas(c, grid);
+    public void start() {
+        Config cfg = new Config(1000, 0, tf1.getText(), "cokolwiek");
+        FileRead fr = new FileRead(cfg);
+        fr.setSize();
+        fr.readFile();
+        String str[][] = fr.getTemp();
+        Grid grid = new Grid(fr.getX(), fr.getY());
+        final Cell[][] macierz = grid.createInitial(fr.getX(), fr.getY(), str);
+        cp.drawCanvas(c, macierz);
+        Generation gen = new Generation(fr, cfg);
+        Grid m2 = new Grid();
+        m2.savegrid(macierz);
+        //tu
+        Timer t = new Timer();
+        t.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                //gc.clearRect(0, 0, 500, 500);
+                Cell[][] m = m2.getgrid();
+                m = gen.generateNext(m);
+                cp.clearCanvas(c);
+                cp.drawCanvas(c, m);
+                m2.savegrid(m);
+                System.out.println("ale");
+            }
+        }, 0, 1000);
     }
 
     public void changel1() {

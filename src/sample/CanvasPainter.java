@@ -17,6 +17,11 @@ public class CanvasPainter {
         drawgrid(gc, arr_h, arr_w, sq_h, sq_w);
     }
 
+    void clearCanvas (Canvas c) {
+        GraphicsContext gc = c.getGraphicsContext2D();
+        gc.clearRect(0, 0, c.getHeight(), c.getWidth());
+    }
+
     private void drawsquares (GraphicsContext gc, Cell[][] arr, int arr_h, int arr_w, int sq_h, int sq_w) {
         gc.setLineWidth(5);
         for(int i = 0; i < arr_h; i++) {
@@ -35,6 +40,7 @@ public class CanvasPainter {
     }
 
     private void drawempty (GraphicsContext gc, int x, int y, int a, int b) {
+
         gc.setFill(Color.rgb(0, 0, 0));
         gc.fillRect(x, y, a, b);
     }
