@@ -1,0 +1,5 @@
+20 20
+Horizontalline 0 0
+Verticalline 1 0
+Horizontalgate 2 2
+Verticalgate 3 1
