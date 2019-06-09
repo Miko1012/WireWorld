@@ -8,6 +8,8 @@ public class Grid {
 
     public void savegrid(Cell[][] arr) {this.grid = arr;}
     public Cell[][] getgrid () {return this.grid;}
+    public int getx () {return this.xSize;}
+    public void setx (int x) {this.xSize = x;}
 
     public Grid(int x, int y){
         this.xSize = x;

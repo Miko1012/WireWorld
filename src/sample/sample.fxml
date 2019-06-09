@@ -16,10 +16,10 @@
       <TextField fx:id="tf2" layoutX="600.0" layoutY="159.0" prefHeight="20.0" prefWidth="250.0" promptText="Nazwij plik..." />
       <Label fx:id="l3" layoutX="600.0" layoutY="210.0" prefHeight="20.0" prefWidth="250.0" text="Interwał (w milisekundach)" />
       <TextField fx:id="tf3" layoutX="600.0" layoutY="247.0" prefHeight="20.0" prefWidth="250.0" promptText="0 - 1000" />
-      <Button fx:id="b1" layoutX="600.0" layoutY="380.0" mnemonicParsing="false" onAction="#start" prefHeight="80.0" prefWidth="120.0" text="Start" />
-      <Button fx:id="b3" layoutX="730.0" layoutY="380.0" mnemonicParsing="false" onAction="#readfile" prefHeight="80.0" prefWidth="120.0" text="Wczytaj plik" />
+      <Button fx:id="b1" layoutX="600.0" layoutY="380.0" mnemonicParsing="false" onAction="#start" prefHeight="80.0" prefWidth="250.0" text="Start" />
       <Label fx:id="l4" layoutX="600.0" layoutY="292.0" text="Ilość generacji do wygenerowania" />
       <TextField fx:id="tf4" layoutX="600.0" layoutY="319.0" prefHeight="25.0" prefWidth="250.0" promptText="1 - 1000" />
-      <TextArea layoutX="50.0" layoutY="480.0" prefHeight="280.0" prefWidth="800.0" />
+      <TextArea fx:id="ta1" layoutX="50.0" layoutY="559.0" prefHeight="211.0" prefWidth="800.0" />
    </children>
+
 </AnchorPane>
