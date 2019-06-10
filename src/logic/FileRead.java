@@ -138,7 +138,7 @@ public class FileRead {
                             temp[xTemp-1][yTemp+2] = "C";
                             temp[xTemp][yTemp] = "C";
                             temp[xTemp][yTemp+1] = "C";
-                            temp[xTemp][yTemp+2] = "C";
+                            temp[xTemp][yTemp+3] = "C";
                             temp[xTemp+1][yTemp+1] = "C";
                             temp[xTemp+1][yTemp+2] = "C";
 
@@ -159,8 +159,8 @@ public class FileRead {
                             temp[xTemp+1][yTemp-1] = "C";
                             temp[xTemp+1][yTemp] = "C";
                             temp[xTemp+1][yTemp+1] = "C";
-                            temp[xTemp+2][yTemp] = "C";
-                            temp[xTemp+2][yTemp+2] = "C";
+                            temp[xTemp+2][yTemp-1] = "C";
+                            temp[xTemp+2][yTemp+1] = "C";
                             temp[xTemp+3][yTemp] = "C";
 
                         } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
