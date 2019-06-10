@@ -24,11 +24,19 @@ public class Controller  {
 
     @FXML
     public Button b1;
+    @FXML
     private TextField tf1;
+    @FXML
+    private TextField tf2;
+    @FXML
     private TextField tf3;
+    @FXML
     private TextField tf4;
+    @FXML
     private TextArea ta1;
+    @FXML
     public Canvas c;
+    @FXML
     private PrintStream ps;
     //private PrintStream ps = new PrintStream(new Console(console));
 
@@ -69,29 +77,32 @@ public class Controller  {
         System.out.println("Hello World");
     }*/
 
-    public void readfile(ActionEvent event) {
-        System.setOut(ps);
-        System.setErr(ps);
-        Config cfg = new Config(1000, 0, tf1.getText(), "cokolwiek");
-        FileRead fr = new FileRead(cfg);
-        fr.setSize();
-        fr.readFile();
-        String str[][] = fr.getTemp();
-        Grid grid = new Grid(fr.getX(), fr.getY());
-        Cell[][] macierz = grid.createInitial(fr.getX(), fr.getY(), str);
-        cp.drawCanvas(c, macierz);
-    }
 
     public void start() {
         System.setOut(ps);
         System.setErr(ps);
-        Config cfg = new Config(1000, 0, tf1.getText(), "cokolwiek");
+        boolean op = true;
+        Config cfg = new Config(1000, 0, tf1.getText(), tf2.getText());
         FileRead fr = new FileRead(cfg);
-        fr.setSize();
-        fr.readFile();
+        op = fr.setSize();
+        if(!op) {return;}
+        op = fr.readFile();
+        System.out.println(op);
+        if(!op) {return;}
         String str[][] = fr.getTemp();
         Grid grid = new Grid(fr.getX(), fr.getY());
         final Cell[][] macierz = grid.createInitial(fr.getX(), fr.getY(), str);
+
+
+        cfg.setoutfile(tf2.getText());
+        //System.out.println(cfg.getOutFile());
+        FileWrite fw = new FileWrite(cfg, fr);
+
+        if(Integer.parseInt(tf3.getText()) < 1) {System.out.println("Podaj poprawny interwał!"); return;}
+        if(Integer.parseInt(tf3.getText()) > 1000) {System.out.println("Podaj poprawny interwał!"); return;}
+        if(Integer.parseInt(tf4.getText()) < 1) {System.out.println("Podaj poprawna ilosc generacji!"); return;}
+        if(Integer.parseInt(tf4.getText()) > 1000) {System.out.println("Podaj poprawna ilosc generacji!"); return;}
+
        // cp.drawCanvas(c, macierz);
         Generation gen = new Generation(fr, cfg);
         Grid m2 = new Grid();
@@ -114,6 +125,7 @@ public class Controller  {
                //
             }
         }, 0, Integer.parseInt(tf3.getText()));
+        fw.writeFile(m2.getgrid());
     }
 
 }

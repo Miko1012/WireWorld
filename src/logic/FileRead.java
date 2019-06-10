@@ -221,6 +221,7 @@ public class FileRead {
             }
         } catch(IOException e){
             System.out.println("Plik z konfiguracją wejściową nie został znaleziony. Upewnij się, że znajduje się on w odpowiednim folderze.");
+            return false;
         }
 
         return true;
