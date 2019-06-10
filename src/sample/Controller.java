@@ -87,7 +87,7 @@ public class Controller  {
         op = fr.setSize();
         if(!op) {return;}
         op = fr.readFile();
-        System.out.println(op);
+    //    System.out.println(op);
         if(!op) {return;}
         String str[][] = fr.getTemp();
         Grid grid = new Grid(fr.getX(), fr.getY());
