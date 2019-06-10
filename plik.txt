@@ -1,3 +1,24 @@
-5 5
-Horizontalline 0 0
-Head 0 0
+15 15
+
+Conductor 0 6
+Conductor 0 7
+Conductor 0 8
+Conductor 1 7
+Horizontalline 2 1
+Horizontalline 2 6
+Conductor 2 11
+Conductor 2 12
+Conductor 2 13
+Conductor 3 0 
+Conductor 3 14
+Conductor 4 1 
+Conductor 4 13
+Horizontalline 5 2
+Horizontalline 5 7
+Conductor 5 12
+Verticalline 3 7
+Conductor 7 6 
+Conductor 7 8
+Head 3 0
+Head 2 4
+Head 2 5

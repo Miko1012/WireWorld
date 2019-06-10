@@ -124,7 +124,7 @@ public class Controller  {
                 m2.savegrid(m);
                //
             }
-        }, 0, Integer.parseInt(tf3.getText()));
+        }, Integer.parseInt(tf3.getText()), Integer.parseInt(tf3.getText()));
         fw.writeFile(m2.getgrid());
     }
 

@@ -49,7 +49,7 @@ public class FileRead {
             }
             this.temp = new String[x][y];
         } catch (IOException | InputMismatchException e){
-            System.out.println("Błędny format pliku.");
+            System.out.println("Bledny format pliku.");
             return false;
         }
         return true;
@@ -105,7 +105,7 @@ public class FileRead {
                                     temp[xTemp][yTemp+i] = "C";
                             }
                         } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
-                            System.out.println("Niepoprawna definicja współrzędnych w pliku wejściowym.");
+                            System.out.println("Niepoprawna definicja wspolrzednych w pliku wejsciowym.");
                             return false;
                         }
                         break;
@@ -122,7 +122,7 @@ public class FileRead {
                                     temp[xTemp+i][yTemp] = "C";
                             }
                         } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
-                            System.out.println("Niepoprawna definicja współrzędnych w pliku wejściowym.");
+                            System.out.println("Niepoprawna definicja wspolrzednych w pliku wejsciowym.");
                             return false;
                         }
                         break;
