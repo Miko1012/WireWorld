@@ -143,7 +143,7 @@ public class FileRead {
                             temp[xTemp+1][yTemp+2] = "C";
 
                         } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
-                            System.out.println("Niepoprawna definicja współrzędnych w pliku wejściowym.");
+                            System.out.println("Niepoprawna definicja wspolrzednych w pliku wejsciowym.");
                             return false;
                         }
                         break;
@@ -164,7 +164,7 @@ public class FileRead {
                             temp[xTemp+3][yTemp] = "C";
 
                         } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
-                            System.out.println("Niepoprawna definicja współrzędnych w pliku wejściowym.");
+                            System.out.println("Niepoprawna definicja wspolrzednych w pliku wejsciowym.");
                             return false;
                         }
                         break;
@@ -179,7 +179,7 @@ public class FileRead {
 
                             temp[xTemp][yTemp] = "H";
                         } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
-                            System.out.println("Niepoprawna definicja współrzędnych w pliku wejściowym.");
+                            System.out.println("Niepoprawna definicja wspolrzędnych w pliku wejsciowym.");
                             return false;
                         }
                         break;
@@ -194,7 +194,7 @@ public class FileRead {
 
                             temp[xTemp][yTemp] = "C";
                         } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
-                            System.out.println("Niepoprawna definicja współrzędnych w pliku wejściowym.");
+                            System.out.println("Niepoprawna definicja wspolrzednych w pliku wejsciowym.");
                             return false;
                         }
                         break;
@@ -209,7 +209,7 @@ public class FileRead {
 
                             temp[xTemp][yTemp] = "T";
                         } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
-                            System.out.println("Niepoprawna definicja współrzędnych w pliku wejściowym.");
+                            System.out.println("Niepoprawna definicja wspolrzednych w pliku wejsciowym.");
                             return false;
                         }
                         break;
@@ -220,7 +220,7 @@ public class FileRead {
                 }
             }
         } catch(IOException e){
-            System.out.println("Plik z konfiguracją wejściową nie został znaleziony. Upewnij się, że znajduje się on w odpowiednim folderze.");
+            System.out.println("Plik z konfiguracja wejściowa nie zostal znaleziony. Upewnij sie, ze znajduje sie on w odpowiednim folderze.");
             return false;
         }
 
